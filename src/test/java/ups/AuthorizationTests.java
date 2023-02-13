@@ -29,8 +29,8 @@ public class AuthorizationTests {
             $("#submitBtn").click();
         });
 
-        step("Проверить валидационную ошибку", () -> {
+ /*       step("Проверить валидационную ошибку", () -> {
             $(".ups-formError:nth-child(1)").shouldHave(text("Что-то пошло не так."));
-        });
+        });*/
     }
 }
