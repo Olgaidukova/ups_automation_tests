@@ -9,14 +9,14 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class SearchTests {
+public class SearchTests extends TestBase {
     @ValueSource(strings = {
             "1Z81RF250341587774",
             "CN0002332718RU9"
     })
     @ParameterizedTest(name = "Отслеживается трек-номер {0}")
     @Tag("Jenkins")
-    void pochtaSearchTest(String trackNumber) {
+    void upsSearchTest(String trackNumber) {
         step("Открыть форму отслеживание UPS-отправлений", () -> {
             open("https://www.ups.com/track");
         });
@@ -27,7 +27,8 @@ public class SearchTests {
         });
 
         step("Проверить результаты поиска", () -> {
-            $(".col-md-8 .ups-card_content").shouldHave(text("We could not locate the shipment details for this tracking number."));
+            $(".col-md-8 .ups-card_content")
+                    .shouldHave(text("We could not locate the shipment details for this tracking number."));
         });
     }
 }
