@@ -1,35 +1,35 @@
 package ups;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byLinkText;
-import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 public class AuthorizationTests extends TestBase {
     @Test
     @Tag("Jenkins")
+    @Owner("O.Gaidukova")
     @DisplayName("Проверка авторизации с некорректными логин/пароль")
     void upsAuthNegativeTest(){
+        TestData data = new TestData();
         step("Открыть сайт UPS", () -> {
-            open("https://www.ups.com/ru/ru/Home.page");
+            upsPage.openHomePage();
         });
 
         step("Перейти на форму авторизации", () -> {
-            $(byLinkText("Войти в систему/зарегистрироваться")).click();
+            upsPage.authLink();
         });
 
         step("Ввести некорректные данные", () -> {
-            $("#email").setValue("test@gmail.com");
-            $("#pwd").setValue("12345678");
-            $("#submitBtn").click();
+            upsPage.setEmail(data.userEmail)
+                    .setPassword(data.password)
+                    .submit();
         });
 
         step("Проверить валидационную ошибку", () -> {
-            $("h1").shouldHave(text("Access Denied"));
+            upsPage.verifyResultAuthAccess();
         });
     }
 }

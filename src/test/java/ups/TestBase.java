@@ -8,13 +8,15 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import pages.UpsPage;
 
 
 public class TestBase {
+    UpsPage upsPage = new UpsPage();
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.baseUrl = "https://www.ups.com/ru/ru/Home.page";
+        Configuration.baseUrl = "https://www.ups.com";
         Configuration.browserSize = System.getProperty("browserSize","1920x1080");
         Configuration.browser = System.getProperty("browser","chrome");
         Configuration.browserVersion = System.getProperty("browserVersion","100.0");
