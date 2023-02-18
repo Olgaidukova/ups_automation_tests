@@ -39,8 +39,8 @@ public class DeliveryTests extends TestBase {
             $("#ctc_module1_submit").click();
 
             step("Проверить результат", () -> {
-                $("table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(3)")
-                        .shouldHave(text("NANGEENAN, 6414 Австралия"));
+                $(".sel:nth-child(3)")
+                        .shouldHave(text("Из  NANGEENAN, 6414 Австралия"));
             });
         });
     }
