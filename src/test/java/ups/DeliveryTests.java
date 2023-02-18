@@ -10,6 +10,7 @@ import static io.qameta.allure.Allure.step;
 public class DeliveryTests extends TestBase {
     @Test
     @Tag("Jenkins")
+    @Tag("Simple")
     @Owner("O.Gaidukova")
     @DisplayName("Проверка формы заполнения расчета сроков и стоимости")
     void upsDeliveryTest(){
