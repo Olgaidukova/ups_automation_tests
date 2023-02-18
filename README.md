@@ -1,4 +1,4 @@
-<h1 >Проект автоматизации UI для сайта <a href="https://www.ups.com">UPS.com</a></h1>
+<h1 >Проект автоматизации UI для сайта <a href="https://www.ups.com/ru/ru/Home.page">UPS.com</a></h1>
 
 ## :pushpin: Содержание:
 
@@ -25,7 +25,7 @@
 <a href="https://aerokube.com/selenoid/"><img alt="Selenoid" height="50" src="images/logo/Selenoid.svg" width="50"/></a>
 <a href="https://www.jenkins.io/"><img alt="Jenkins" height="50" src="images/logo/Jenkins.svg" width="50"/></a>
 <a href="https://github.com/allure-framework/"><img alt="Allure Report" height="50" src="images/logo/Allure_Report.svg" width="50"/></a>
-<a href="https://qameta.io/"><img alt="Allure TestOps" height="50" src="images/logo/AllureTestOps.svg " width="50"/></a>
+<a href="https://qameta.io/"><img alt="Allure TestOps" height="50" src="images/logo/AllureTestOps.png" width="120"/></a>
 <a href="https://www.atlassian.com/software/jira"><img alt="Jira" height="50" src="images/logo/Jira.png" width="50"/></a>  
 <a href="https://telegram.org/"><img alt="Telegram" height="50" src="images/logo/Telegram.svg" width="50"/></a>
 </div>
@@ -121,7 +121,7 @@ clean test \
 </p>
 
 <a id="testops"></a>
-## Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/1889/test-cases?treeId=3631"> Allure TestOps </a>
+## <img width="4%" style="vertical-align:middle" title="Allure Report" src="images/logo/AllureTestOps.png"> Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/1889/test-cases?treeId=3631"> Allure TestOps </a>
 
 ### Доска
 <p align="center">
