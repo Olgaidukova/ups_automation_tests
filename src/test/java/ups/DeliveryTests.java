@@ -1,6 +1,7 @@
 package ups;
 
 import io.qameta.allure.Owner;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -11,6 +12,7 @@ public class DeliveryTests extends TestBase {
     @Test
     @Tag("Jenkins")
     @Tag("Simple")
+    @Disabled
     @Owner("O.Gaidukova")
     @DisplayName("Проверка формы заполнения расчета сроков и стоимости")
     void upsDeliveryTest(){

@@ -32,12 +32,12 @@ public class UpsPage {
 
 
     public UpsPage openHomePage() {
-        open("/ru/ru/Home.page");
+        open("https://www.ups.com/ru/ru/Home.page");
         return this;
     }
 
     public UpsPage openTrackPage() {
-        open("/track");
+        open("https://www.ups.com/track");
         return this;
     }
 
