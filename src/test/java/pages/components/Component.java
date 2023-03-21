@@ -8,8 +8,8 @@ public class Component {
         $("h1").shouldHave(text("Access Denied"));
     }
     public void verifyCalculate(){
-        $(".sel:nth-child(3)")
-                .shouldHave(text("Из  NANGEENAN, 6414 Австралия"));
+        $("table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(3)")
+                .shouldHave(text("NANGEENAN, 6414 Австралия"));
     }
     public void verifySearch(){
         $(".col-md-8 .ups-card_content")
