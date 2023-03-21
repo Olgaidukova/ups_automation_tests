@@ -26,7 +26,7 @@ public class SearchTests extends TestBase {
             $("#stApp_btnTrack").click();
         });
 
-        step("Проверить результаты поиска", () -> {
+        step("Проверить результаты поиска-", () -> {
             $(".col-md-8 .ups-card_content")
                     .shouldHave(text("We could not locate the shipment details for this tracking number."));
         });
