@@ -27,7 +27,16 @@ public class UpsPage {
             setTrack=$("#stApp_trackingNumber"),
             searchTrack= $("#stApp_btnTrack"),
             menuLink= $("#ups-menuLinks3"),
-            servicesLink=$(byLinkText("Посмотреть все услуги"));
+            servicesLink=$(byLinkText("Посмотреть все услуги")),
+            scrollHeader=$("#step-2 h3"),
+            fromCountry=$("#from_country"),
+            fromCity=$("#from_city"),
+            fromState=$("#from_state"),
+            fromZip=$("#from_zip"),
+            toCountry=$("#to_country"),
+            toCity=$("#to_city"),
+            toZip=$("#to_zip"),
+            loadingButton= $(".ups-cta_primary");
     ;
 
 
@@ -89,8 +98,12 @@ public class UpsPage {
         return this;
     }
 
-    public UpsPage scroll() {
+    public UpsPage scrollPostCode() {
         scrollPostCode.scrollTo();
+        return this;
+    }
+    public UpsPage scrollHeader() {
+        scrollHeader.scrollTo();
         return this;
     }
     public UpsPage choiceDestCountry(String value) {
@@ -150,6 +163,39 @@ public class UpsPage {
     }
     public UpsPage verifyServices() {
         component.verifyServices();
+        return this;
+    }
+
+    public UpsPage fromCountry(String value) {
+        fromCountry.selectOption(value);
+        return this;
+    }
+    public UpsPage fromCity(String value) {
+        fromCity.setValue(value);
+        return this;
+    }
+    public UpsPage fromState(String value) {
+        fromState.selectOption(value);
+        return this;
+    }
+    public UpsPage fromZip(String value) {
+        fromZip.setValue(value);
+        return this;
+    }
+    public UpsPage toCountry(String value) {
+        toCountry.selectOption(value);
+        return this;
+    }
+    public UpsPage toCity(String value) {
+        toCity.setValue(value);
+        return this;
+    }
+    public UpsPage toZip(String value) {
+        toZip.setValue(value);
+        return this;
+    }
+    public UpsPage loadingButton() {
+        loadingButton.click();
         return this;
     }
 }

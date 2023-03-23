@@ -8,8 +8,7 @@ public class Component {
         $("h1").shouldHave(text("Access Denied"));
     }
     public void verifyCalculate(){
-        $("table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(3)")
-                .shouldHave(text("NANGEENAN, 6414 Австралия"));
+        $(".sel:nth-child(3)").shouldHave(text("Из  NANGEENAN, 6414 Австралия"));
     }
     public void verifyCargoCalculate(){
         $("#step-2 h3")

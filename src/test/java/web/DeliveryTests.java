@@ -5,7 +5,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
 public class DeliveryTests extends TestBase {
@@ -23,7 +22,7 @@ public class DeliveryTests extends TestBase {
             upsPage.choiceCountry(data.origCountry)
                     .origCity(data.origCity)
                     .origPostCode(data.origPostCode)
-                    .scroll()
+                    .scrollPostCode()
                     .choiceDestCountry(data.destCountry)
                     .destPostCode(data.destPostCode)
                     .destCity(data.destCity)
@@ -47,32 +46,15 @@ public class DeliveryTests extends TestBase {
         });
 
         step("Заполнить данными для доставки", () -> {
-/*            upsPage.choiceCountry(data.origCountry)
-                    .origCity(data.origCity)
-                    .origPostCode(data.origPostCode)
-                    .scroll()
-                    .choiceDestCountry(data.destCountry)
-                    .destPostCode(data.destPostCode)
-                    .destCity(data.destCity)
-                    .scalar(data.scalar)
-                    .update();*/
-            $("#step-2 h3").scrollTo();
-            $("#from_country").click();
-            $("#from_country").selectOption(data.origCountry);
-            $("#from_city").click();
-            $("#from_city").setValue(data.origCity);
-            $("#from_state").click();
-            $("#from_state").selectOption("Территория столицы Австралии");
-            $("#from_zip").click();
-            $("#from_zip").setValue(data.origPostCode);
-            $("#to_country").click();
-            $("#to_country").selectOption(data.destCountry);
-            $("#to_city").click();
-            $("#to_city").setValue(data.destCity);
-            $("#to_zip").click();
-            $("#to_zip").setValue("500");
-            $(".ups-cta_primary").click();
-
+            upsPage.scrollHeader()
+                    .fromCountry(data.origCountry)
+                    .fromCity(data.origCity)
+                    .fromState(data.state)
+                    .fromZip(data.origPostCode)
+                    .toCountry(data.destCountry)
+                    .toCity(data.destCity)
+                    .toZip(data.destPostCode)
+                    .loadingButton();
 
             step("Проверить результат", () -> {
                 upsPage.verifyCargoCalculate();

@@ -14,4 +14,5 @@ public class TestData {
     String destPostCode = "6500";
     String destCity = "WOLFSBERG";
     String scalar = "500";
+    String state = "Территория столицы Австралии";
 }
