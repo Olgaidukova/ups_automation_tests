@@ -11,6 +11,10 @@ public class Component {
         $("table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(3)")
                 .shouldHave(text("NANGEENAN, 6414 Австралия"));
     }
+    public void verifyCargoCalculate(){
+        $("#step-2 h3")
+                .shouldHave(text("Подробности единицы груза"));
+    }
     public void verifySearch(){
         $(".col-md-8 .ups-card_content")
                 .shouldHave(text("We could not locate the shipment details for this tracking number."));

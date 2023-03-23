@@ -1,4 +1,4 @@
-package ups;
+package web;
 
 import com.codeborne.selenide.Configuration;
 import config.WebDriverConfig;
@@ -26,6 +26,7 @@ public class WebDriverProvider {
         }
 
         Configuration.baseUrl = config.getBaseUrl();
+        Configuration.browserSize = config.getBrowserSize();
         Configuration.browserVersion = config.getBrowserVersion();
         Configuration.remote = config.getRemoteUrl();
 

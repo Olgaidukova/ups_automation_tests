@@ -45,6 +45,10 @@ public class UpsPage {
         open("https://wwwapps.ups.com/ctc/request?loc=ru_RU");
         return this;
     }
+    public UpsPage openCalculateCargoPage() {
+        open("https://wwwapps.ups.com/fctc/timeandcost?loc=ru_RU");
+        return this;
+    }
 
     public UpsPage authLink() {
         authLinkClick.click();
@@ -86,7 +90,7 @@ public class UpsPage {
     }
 
     public UpsPage scroll() {
-        scrollPostCode.scrollTo();;
+        scrollPostCode.scrollTo();
         return this;
     }
     public UpsPage choiceDestCountry(String value) {
@@ -114,6 +118,10 @@ public class UpsPage {
     }
     public UpsPage verifyCalculate() {
         component.verifyCalculate();
+        return this;
+    }
+    public UpsPage verifyCargoCalculate() {
+        component.verifyCargoCalculate();
         return this;
     }
     public UpsPage forgotPsw() {

@@ -1,4 +1,4 @@
-package ups;
+package web;
 
 import com.github.javafaker.Faker;
 
