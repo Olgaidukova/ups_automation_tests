@@ -1,4 +1,4 @@
-package ups;
+package web;
 
 import com.github.javafaker.Faker;
 
@@ -14,4 +14,5 @@ public class TestData {
     String destPostCode = "6500";
     String destCity = "WOLFSBERG";
     String scalar = "500";
+    String state = "Территория столицы Австралии";
 }

@@ -1,4 +1,4 @@
-package ups;
+package web;
 
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;

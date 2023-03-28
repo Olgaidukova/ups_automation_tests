@@ -1,4 +1,4 @@
-package ups;
+package web;
 
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
@@ -7,12 +7,13 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-public class RecoveryTests extends TestBase {
+public class AuthorizationTests extends TestBase {
     @Test
     @Tag("Jenkins")
     @Owner("O.Gaidukova")
-    @DisplayName("Проверка возможности восстановления пароля")
-    void upsRecoveryPasswordTest(){
+    @DisplayName("Проверка авторизации с некорректными логин/пароль")
+    void upsAuthNegativeTest(){
+        TestData data = new TestData();
         step("Открыть сайт UPS", () -> {
             upsPage.openHomePage();
         });
@@ -21,11 +22,13 @@ public class RecoveryTests extends TestBase {
             upsPage.authLink();
         });
 
-        step("Перейти на форму восстановления", () -> {
-            upsPage.forgotPsw();
+        step("Ввести некорректные данные", () -> {
+            upsPage.setEmail(data.userEmail)
+                    .setPassword(data.password)
+                    .submit();
         });
 
-        step("Проверить доступ", () -> {
+        step("Проверить валидационную ошибку", () -> {
             upsPage.verifyResultAuthAccess();
         });
     }

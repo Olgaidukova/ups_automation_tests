@@ -1,4 +1,4 @@
-package ups;
+package web;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import helpers.Attach;

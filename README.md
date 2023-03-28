@@ -1,4 +1,4 @@
-<h1 >Проект автоматизации UI для сайта <a href="https://www.ups.com/ru/ru/Home.page">UPS.com</a></h1>
+<h1 >Проект автоматизации UI для сайта <a href="https://www.web.com/ru/ru/Home.page">UPS.com</a></h1>
 
 ## :pushpin: Содержание:
 
